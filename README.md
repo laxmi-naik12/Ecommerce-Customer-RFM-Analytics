@@ -1,14 +1,22 @@
-# IKEA Customer Analytics — Web Demo
+# E-commerce Customer RFM Analytics
 
-A static Power BI-inspired demo with Home, Business Overview, RFM Analysis and Metrics Glossary pages.
+Interactive portfolio dashboard built from the uploaded Online Retail II transaction files.
+
+## Files
+- `index.html` — standalone dashboard (loads Chart.js from a CDN).
 
 ## Deploy on Vercel
-1. Upload `index.html` and this `README.md` to a GitHub repository.
-2. In Vercel, import that repository.
-3. Keep the default settings for a static site and deploy.
+1. Upload `index.html` to the root of a GitHub repository.
+2. Import the repository into Vercel.
+3. Keep Framework Preset as **Other** and Root Directory as `./`.
+4. Deploy.
 
-## Data disclaimer
-This web version is **not connected to the original Excel dataset or Power BI model**. It uses illustrative chart data and headline KPI values visible in the supplied dashboard screenshots. Filters demonstrate interaction only and do not query the original data. Replace the illustrative data with authorized project data before presenting it as a live analytical result.
+## Data preparation
+- Combined both Online Retail II CSV files.
+- Excluded rows with missing customer IDs, cancellation invoices, non-positive quantities/prices, or invalid dates.
+- Calculated revenue as Quantity × Price.
+- Calculated customer Recency, Frequency and Monetary value and assigned RFM segments.
+- Dashboard filters operate on the processed transaction/customer-month records.
 
-## Attribution
-Preserve credit to the original project author/source and check the source repository's license before redistributing project assets.
+## Important
+This is an Online Retail II dataset, not confirmed IKEA company data. Keep the project title generic and credit the dataset source/original project author in your repository README as appropriate. The dashboard is an analytical portfolio project, not an official IKEA report.
